@@ -1,15 +1,13 @@
 ﻿spring:
   profiles:
-    active: -dev
-    
+    active:
+    - dev
 ---
 spring:
   profiles: dev
-    application:
-      name: microservice-config-dev
+    application: microservice-config-dev
 ---
 spring:
   profiles: test
-    application: 
-      name: microservice-config-test
+    application: microservice-config-test
 #以utf-8方式保存
