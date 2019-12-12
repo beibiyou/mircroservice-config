@@ -1,0 +1,37 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.beibiyou.springcloud.entities
+  mapper-locations:
+    classpath:mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: microservicecloud-dept
+  datasource:
+    dirver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #集群
+  instance:
+    instance-id: microservice-dept-8001  #默认服务名称的修改
+    prefer-ip-address: true #访问路径修改
+
+info:
+  app.name: beibiyou-microservicecloud
+  company.name: www.beibiyou.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
