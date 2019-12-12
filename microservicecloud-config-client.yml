@@ -9,7 +9,8 @@ spring:
   profiles: dev
   application:
     name: microservice-config-client
-
+beibiyou:
+  name: beibiyou
 eureka:
   client:
     service-url:
