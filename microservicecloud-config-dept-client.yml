@@ -20,7 +20,7 @@ spring:
     dirver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://localhost:3306/cloudDB03
     username: root
-    password: 123456
+    password: '{cipher}828fa2871a920bbb408071368b7919666558a3b05247c1f09a491cbd5c3f8b8d'
     dbcp2:
       min-idle: 5
       initial-size: 5
@@ -60,7 +60,7 @@ spring:
     dirver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://localhost:3306/cloudDB02
     username: root
-    password: 123456
+    password: '{cipher}828fa2871a920bbb408071368b7919666558a3b05247c1f09a491cbd5c3f8b8d'
     dbcp2:
       min-idle: 5
       initial-size: 5
